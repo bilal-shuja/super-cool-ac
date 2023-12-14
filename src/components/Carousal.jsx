@@ -11,9 +11,9 @@ const Carousal = () => {
                 <div className="carousel-item">
                     <img src="/productbanner2.webp" className="d-block w-100" alt="Second slide" />
                 </div>
-                <div className="carousel-item">
+                {/* <div className="carousel-item">
                     <img src="/productbanner3.webp" className="d-block w-100" alt="Third slide" />
-                </div>
+                </div> */}
             </div>
         </div>
         </section>
