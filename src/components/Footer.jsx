@@ -3,170 +3,156 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
-        // <!-- ======= Footer ======= -->
-        // <footer id="footer" className="footer">
 
-        //     <div className="container footer-top">
-        //         <div className="row gy-4">
-        //             <div className="col-lg-5 col-md-12 footer-about">
-        //                 <Link to="/" className="logo d-flex align-items-center">
-        //                     <span>Super Cool Ac</span>
-        //                 </Link>
-        //                 <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-        //                 <div className="social-links d-flex mt-4">
-        //                     <a href=""><i className="fa-brands fa-twitter"></i></a>
-        //                     <a href=""><i className="fa-brands fa-facebook"></i></a>
-        //                     <a href=""><i className="fa-brands fa-instagram"></i></a>
-        //                     <a href=""><i className="fa-brands fa-linkedin"></i></a>
-        //                 </div>
-        //             </div>
+<>
+  {/* <div className="b-example-divider fw-bolder mt-5" />
 
-        //             <div className="col-lg-2 col-6 footer-links">
-        //                 <h4>Useful Links</h4>
-        //                 <ul>
-        //                     <li><a href="#">Home</a></li>
-        //                     <li><a href="#">About us</a></li>
-        //                     <li><a href="#">Services</a></li>
-        //                     <li><a href="#">Terms of service</a></li>
-        //                     <li><a href="#">Privacy policy</a></li>
-        //                 </ul>
-        //             </div>
+<div className="container">
+  <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div className="col-md-4 d-flex align-items-center">
+      <a href="/" className="mb-3 me-2 mb-md-0  text-decoration-none lh-1 ">
+      <i className="navbar-logo fa-solid fa-lightbulb fs-3" />
+      </a>
+      <span className="text-dark ms-4">© 2023 Company, Inc</span>
+    </div>
+    <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li className="me-4"><a className="text-dark" href="#"> <i className="fa-brands fa-facebook fs-3"></i> </a></li>
+      <li className="me-4"><a className="text-dark" href="#"></a><i className="fa-brands fa-instagram fs-3"></i></li>
+      <li className="me-2"><a className="text-dark" href="#"></a><i className="fa-brands fa-youtube fs-3"></i></li>
+      <li className="ms-3"><a className="text-dark" href="#"></a><i className="fa-brands fa-linkedin fs-3"></i></li>
 
-        //             <div className="col-lg-2 col-6 footer-links">
-        //                 <h4>Our Services</h4>
-        //                 <ul>
-        //                     <li><a href="#">Web Design</a></li>
-        //                     <li><a href="#">Web Development</a></li>
-        //                     <li><a href="#">Product Management</a></li>
-        //                     <li><a href="#">Marketing</a></li>
-        //                     <li><a href="#">Graphic Design</a></li>
-        //                 </ul>
-        //             </div>
+    </ul>
+  </footer>
+</div> */}
 
-        //             <div className="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-        //                 <h4>Contact Us</h4>
-        //                 <p>A108 Adam Street</p>
-        //                 <p>New York, NY 535022</p>
-        //                 <p>United States</p>
-        //                 <p className="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-        //                 <p><strong>Email:</strong> <span>info@example.com</span></p>
-        //             </div>
 
-        //         </div>
-        //     </div>
+{/* Footer */}
+<footer className="text-center text-lg-start bg-body-tertiary text-muted">
 
-        //     <div className="container copyright text-center mt-4">
-        //         <p>&copy; <span>Copyright</span> <strong className="px-1">Append</strong> <span>All Rights Reserved</span></p>
-        //         <div className="credits">
-        //             {/* <!-- All the links in the footer should remain intact. -->
-        //   <!-- You can delete the links only if you've purchased the pro version. -->
-        //   <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        //   <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] --> */}
-        //             Designed by <a href="#">Super Cool Ac</a>
-        //         </div>
-        //     </div>
 
-        // </footer>
-        <>
-            <footer class="footer-super">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="footer-arrow">
-                                <div class="top-arrow">
-                                    <div class="arrow-circle">
-                                        <i class="fa fa-solid fa-chevron-up"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="footer-content">
-                                <h3>Quick Links</h3>
-                                <ul class="unstyle-list">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/career">Careers</a></li>
-                                    {/* <li><a href="https://www.supergeneral.com/ae/sitemap">Sitemap</a></li> */}
-                                    <li><a href="/about-us">About Us</a></li>
-                                    <li><a href="products">Product Details</a></li>
-                                    <li><a href="/contact-us">Contact Us</a></li>
-                                    {/* <li><a href="https://www.supergeneral.com/ae/media/print">Download Brochure</a></li> */}
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="footer-content mborder-bottom">
-                                <h3>Products</h3>
-                                <ul class="unstyle-list">
-                                    <li><a href="#">Air Conditioners</a></li>
+<hr className='text-muted text-light'/>
 
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            <div class="footer-content add-box">
-                                <h3>CORPORATE OFFICE</h3>
-                                <p class="address">
-                                    Super Cool Ac<br />
-                                    MPC Building Airport Road<br />
-                                    Near Cargo Village,<br />
-                                    P.O. Box No: 51027, Dubai, UAE,<br />
-                                    Phone No:<a href="#"> </a><br />
-                                    Fax No: <br />
-                                    Email: <a href="#"></a><br />
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6 col-12">
-                            {/* <div class="footer-form">
-                            <h3>STAY CONNECTED<br /> FOR LATEST UPDATES</h3>
-                            <div id="subscribe-form" class="form">
-                                <input type="email" name="footer-email" id="footername" placeholder="Enter email address" />
-                                <button class="btn btn-warning">Submit</button>
-                            </div>
-                            <span class="error"></span>
-                            <span class="sucess"></span>
-                            <a href="#" class="looking-service">Looking for service?</a>
-                        </div> */}
-                            <div class="social-icon">
-                                <h4>STAY CONNECTED<br /> FOR LATEST UPDATES</h4>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <a href="#">
-                                            <img src="/facebook.png" class="img-fluid lazyload" alt="facebook" />
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#">
-                                            <img src="/twitter.png" class="img-fluid lazyload" alt="twitter" />
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#">
-                                            <img src="/youtube.png" class="img-fluid lazyload" alt="youtube" />
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="#">
-                                            <img src="/insta.png" class="img-fluid" alt="instagram" />
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <p>COPYRIGHT © 2023 SUPER GENERAL. ALL RIGHTS RESERVED</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
+  {/* Section: Social media */}
+  <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    {/* Left */}
+    
+    <div className="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    {/* Left */}
+    {/* Right */}
+    <div>
+      <a href className="me-4 text-reset">
+        <i className="fab fa-facebook-f" />
+      </a>
+      <a href className="me-4 text-reset">
+        <i className="fab fa-twitter" />
+      </a>
+      <a href className="me-4 text-reset">
+        <i className="fab fa-google" />
+      </a>
+      <a href className="me-4 text-reset">
+        <i className="fab fa-instagram" />
+      </a>
+      <a href className="me-4 text-reset">
+        <i className="fab fa-linkedin" />
+      </a>
+      <a href className="me-4 text-reset">
+        <i className="fab fa-github" />
+      </a>
+    </div>
+    {/* Right */}
+  </section>
+
+  {/* Section: Social media */}
+  {/* Section: Links  */}
+  <section className>
+    <div className="container text-center text-md-start mt-5">
+      {/* Grid row */}
+      <div className="row mt-3">
+        {/* Grid column */}
+        <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          {/* Content */}
+          <h6 className="text-uppercase fw-bold mb-4">
+            <i className="fas fa-gem me-3" />Company name
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        {/* Grid column */}
+        {/* Grid column */}
+        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          {/* Links */}
+          <h6 className="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" className="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">Laravel</a>
+          </p>
+        </div>
+        {/* Grid column */}
+        {/* Grid column */}
+        <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          {/* Links */}
+          <h6 className="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" className="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" className="text-reset">Help</a>
+          </p>
+        </div>
+        {/* Grid column */}
+        {/* Grid column */}
+        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          {/* Links */}
+          <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i className="fas fa-home me-3" /> New York, NY 10012, US</p>
+          <p>
+            <i className="fas fa-envelope me-3" />
+            info@example.com
+          </p>
+          <p><i className="fas fa-phone me-3" /> + 01 234 567 88</p>
+          <p><i className="fas fa-print me-3" /> + 01 234 567 89</p>
+        </div>
+        {/* Grid column */}
+      </div>
+      {/* Grid row */}
+    </div>
+  </section>
+  {/* Section: Links  */}
+  {/* Copyright */}
+  <div className="text-center p-4" style={{backgroundColor: 'rgba(0, 0, 0, 0.01)'}}>
+    © 2023 Copyright&nbsp;&nbsp;
+    <a className="text-reset fw-bold" href="#">AlphaniteSofts Pvt Ltd.</a>
+  </div>
+  {/* Copyright */}
+</footer>
+{/* Footer */}
+
+
+
+</>
+
 
     )
 }
