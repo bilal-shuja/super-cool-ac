@@ -8,16 +8,34 @@ const Shop = () => {
     const { data: advanceSearchData, isError: advanceSearchError, isLoading: advanceSearchLoading } = useGetAdvanceProductsQuery();
     const acCategories = ['Window AC', 'Portable AC', 'Floor Standing AC', ' Cassette AC', 'Light Commercial AC - Duct Type', 'Air Curtain']
     const CapacityBTU = ['9000-12000 BTUs', '12000-18000 BTUs', ' 18000-24000 BTUs', '24000-30000 BTUs', '30000-36000 BTUs', '36000-48000 BTUs', '48000-60000 BTUs', '70000 BTUs & above']
-    const compressorType = ['Reciprocating', 'Scroll', ' Rotary', 'Inverter']    
+    const compressorType = ['Reciprocating', 'Scroll', ' Rotary', 'Inverter']
     const [selectedACType, setSelectedACType] = useState([]);
     const [selectedCapacityBTU, setSelectedCapacityBTU] = useState([]);
     const [selectedCompressorType, setSelectedCompressorType] = useState([]);
     const [visibleProducts, setVisibleProducts] = useState(12);
+    const [isFilterVisible, setIsFilterVisible] = useState(true);
 
+    const toggleFilter = () => {
+        setIsFilterVisible(!isFilterVisible);
+    };
+
+    const applyFilters = () => {
+        console.log(
+            'Filters applied:',
+            selectedACType,
+            selectedCapacityBTU,
+            selectedCompressorType
+        );
+        updateFilteredProducts();
+        toggleFilter(); // Close the filter after applying
+    };
     const loadMoreProducts = () => {
         setVisibleProducts(prevVisibleProducts => prevVisibleProducts + 12);
     };
-    
+
+    const updateFilteredProducts = () => {
+
+    }
     let filteredProducts;
     if (Array.isArray(advanceSearchData?.data)) {
         filteredProducts = advanceSearchData.data.filter(item => {
@@ -31,7 +49,7 @@ const Shop = () => {
         // If advanceSearchData?.data is not an array, initialize filteredProducts as an empty array
         filteredProducts = [];
     }
-useEffect(() => (
+    useEffect(() => (
         console.log(advanceSearchData?.data, 'searchdata')
     ), [advanceSearchData?.data])
 
@@ -63,12 +81,13 @@ useEffect(() => (
                     <div className="col-12 d-block d-md-none">
                         <div className="filter-mobile">
                             <div className="filter-mobile-img">
-                                <img data-src="https://www.supergeneral.com/public/images/icon/filter.png" alt="filter-icon" className="img-fluid lazyload" />
+                                <img src="https://www.supergeneral.com/public/images/icon/filter.png" alt="filter-icon" className="img-fluid lazyload"
+                                    onClick={toggleFilter} />
                             </div>
                             <div className="filter-mobile-text">Filter</div>
                         </div>
                     </div>
-                    <div className="col-lg-2 col-md-4 col-12">
+                    <div className={`col-lg-2 col-md-4 col-12 ${isFilterVisible ? 'visible' : 'hidden'}`}>
                         <div className="category-selection-div">
                             <h4>AC Type</h4>
                             {acCategories.map((item, index) => (
@@ -113,7 +132,7 @@ useEffect(() => (
                                 </ul>
                             ))}
                             <div className="apply-btn-category d-block d-md-none">
-                                <a href="#">Apply</a>
+                                <a onClick={applyFilters}>Apply</a>
                             </div>
                         </div>
                     </div>

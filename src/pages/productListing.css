@@ -11,21 +11,19 @@
 }
 .img-magnifier-container {
   position: relative;
-  overflow: hidden;
 }
 
 .magnifier-img-container {
   position: relative;
-   width: 100%;
 }
 .magnifier-img {
   width: 100%;
-  height: 45vh;
+  height: 60vh;
 }
 
 .magnifier-image {
-  width: 225px;
-  height: 225px;
+  width: 200px;
+  height: 200px;
   border: 2px solid #fff;
   box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85),
     0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
@@ -84,156 +82,13 @@
   bottom: -2rem;
 }
 
-.product-category-sec .product-box {
-  background-color: #fff;
-  border: 1px solid #c1c1c1;
-  border-radius: 15px;
-  width: calc((100% - 40px) / 3);
-  margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.products .product-image,
-.products .product-image img {
-  border-radius: 0;
-  box-shadow: none;
-}
-.product-box-top,
-.specification-section .key-feature.key-feature-100 {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.product-box .product-recommended {
-  position: absolute;
-  left: 0;
-  top: 0;
-  max-width: 100px;
-}
-.product-category-sec .product-box .product-box-meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: space-between;
-  width: 100%;
-  align-self: flex-end;
-}
-.product-category-sec .product-box:first-child,
-.product-category-sec .product-box:nth-child(3n + 4) {
-  margin-right: 10px;
-  margin-left: 0;
-}
-.product-category-sec .product-box:nth-child(3n + 3) {
-  margin-right: 0;
-  margin-left: 10px;
-}
-.products .product-image {
-  overflow: hidden;
-  padding: 0.5rem;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-.products-links {
-  display: flex;
-  padding: 10px 15px 15px;
-  border-bottom: 1px solid #c1c1c1;
-  align-self: flex-start;
-  width: 100%;
-}
-.key-feature-box,
-.key-feature-header,
-.specification-box {
-  border-bottom: 1px solid #d6d6d6;
-}
-.products-links .products-link-one:last-child {
-  margin-left: auto;
-}
-.products-links .products-link-one img {
-  width: 100%;
-  height: auto;
-  margin-right: 5px;
-  max-width: 25%;
-  aspect-ratio: auto 1/1;
-}
-.products-links .products-link-one a {
-  color: #646464;
-  text-decoration: none;
-}
-.product-image {
-  height: auto;
-  vertical-align: middle;
-  text-align: center;
-  border-radius: 20px;
-  /* box-shadow: -6px 6px 1px -3px #e0a51d; */
-  -webkit-transition: 0.4s;
-  overflow: hidden;
-}
-.product-image img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
-  margin: 0 auto;
-}
-.product-txt {
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  text-align: center;
-}
-.product-txt h3 {
-  font-size: 18px;
-  line-height: 1.2;
-  margin-bottom: 0;
-  font-weight: 500;
-  width: 100%;
-}
-.product-txt .product-code {
-  color: #646464;
-}
-.product-btn {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-#load-more-products,
-.product-btn a {
-  background-color: #fff;
-  color: #f58025;
-  padding: 0.5rem 1.5rem;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-radius: 8px;
-  display: inline-block;
-  margin: 0 auto;
-  border: 1px solid #f58025;
-}
 .btn-amazon a,
 .online-col a {
   display: block;
   text-decoration: none;
   text-align: center;
 }
-#load-more-products:hover,
-.network-menu .nav-link.active,
-.product-box:hover .product-btn a {
-  background-color: #f58025;
-  color: #fff;
-}
 
-#single-category-slider1 .carousel-item img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: auto 96 / 127;
-}
-#single-category-slider .carousel-item img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: auto 128 / 43;
-}
 .specification-section {
   padding: 3rem 2rem 0;
   border-top: 1px solid #d6d6d6;
@@ -268,7 +123,7 @@
 .key-feature-box .key-feature-box-img {
   width: 18%;
   text-align: center;
-  border: 1px solid #f58025;
+  border: 1px solid #0dcaf0;
   border-radius: 5px;
   padding: 10px;
   max-width: 55px;
@@ -338,8 +193,8 @@
   padding-left: 4rem;
 }
 .product-buttons .btn-box:hover {
-  background-color: #f58025;
-  border: 1px solid #f58025;
+  background-color: #0dcaf0;
+  border: 1px solid #0dcaf0;
 }
 .product-buttons .btn-box img {
   margin-right: 20px;
@@ -395,7 +250,7 @@
   transform: translate(0) !important;
 }
 .thumbnails .splide__slide.is-active {
-  border: 1px solid #f58025 !important;
+  border: 1px solid #0dcaf0 !important;
   display: flex;
   align-items: center;
 }
@@ -420,7 +275,7 @@
 }
 .btn-amazon a:hover,
 .online-col a {
-  background-color: #f58025;
+  background-color: #0dcaf0;
 }
 .btn-amazon a > h6 {
   text-align: left;
@@ -438,25 +293,9 @@
 .btn-amazon a > .fa {
   font-size: 20px;
   padding-left: 0.5rem;
-  color: #f58025;
+  color: #0dcaf0;
 }
-.magnify {
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  overflow-x: hidden;
-}
-.large {
-  width: 225px;
-  height: 225px;
-  position: absolute;
-  border-radius: 100%;
-  box-shadow: 0 0 0 7px rgb(255 255 255 / 85%), 0 0 7px 7px rgb(0 0 0 / 25%),
-    inset 0 0 40px 2px rgb(0 0 0 / 25%);
-  display: none;
-  cursor: none;
-  background-color: #fff !important;
-}
+
 .product-spec .nav {
   border: 0;
 }
@@ -473,7 +312,7 @@
   margin-left: 0;
 }
 .product-spec .nav-tabs .nav-link.active {
-  border-bottom: 4px solid #f58025;
+  border-bottom: 4px solid #0dcaf0;
   color: #000;
 }
 .specification-section h4 {
@@ -504,7 +343,7 @@
   padding-left: 1rem;
 }
 .col-keyout li::marker {
-  color: #f58025;
+  color: #0dcaf0;
 }
 .footer-contc-100,
 .footer-contc-50,
@@ -574,7 +413,7 @@
   padding-bottom: 0.5rem;
 }
 .key-feature-des ul li::marker {
-  color: #f58025;
+  color: #0dcaf0;
 }
 .product-descrptions .conditions {
   width: 70%;
@@ -583,7 +422,7 @@
 }
 .btn-where {
   color: #fff;
-  background-color: #f58025;
+  background-color: #0dcaf0;
   padding: 1rem 2rem;
   text-align: center;
   width: 40%;
@@ -734,7 +573,7 @@
   .product-name h6 {
     font-size: 18px;
   }
-  #nav-support .key-feature-box,
+   .key-feature-box,
   .btn-amazon,
   .key-feature-des ul,
   .thumbnails {

@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useState } from "react";
 import { useGetProductsQuery } from "../../features/ProductSlice/ProductSlice";
+import { Link } from "react-router-dom";
 
 const imageUrl = "https://supercoolacimages.alphanitesofts.net/";
 
@@ -48,10 +49,10 @@ const SliderComponents = () => {
                   <p className="text-right" style={{ fontSize: "15px" }}>
                     {item.name}
                   </p>
-                  <a href="#" className="btn btn-outline-info">
+                  <Link to='/productDetails' className="btn btn-outline-info">
                     Read &nbsp;
                     <i className="fa-regular fa-clipboard"></i>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
