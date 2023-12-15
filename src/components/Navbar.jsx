@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <section>
-            <div className="Container fluid">
+            <div className="Container">
                 <div className="top-bar d-none d-md-block bg-light">
-                    <div className="container fluid ">
-                        <div className="row ">
+                    <div className="container">
+                        <div className="row">
                             <div className="col-lg-2 col-md-3 col-12 ms-auto ">
                                 <ul className="social-media list-inline m-0 p-0">
                                     <li className="list-inline-item">
@@ -40,7 +40,7 @@ const Navbar = () => {
                         <nav className="navbar navbar-expand-lg navbar-light ">
                             <div className="container fluid w-100 d-flex ">
                                 <div className='d-flex flex-row justify-content-between'>
-                                    <button className="navbar-toggler me-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                                    <button className="navbar-toggler mx-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                                         <span className="navbar-toggler-icon"></span>
                                     </button>
                                     <a className="navbar-brand mb-0 h1" href='/'>
@@ -55,38 +55,38 @@ const Navbar = () => {
                         </nav>
                     </div>
                 </div>
-            </div >
-            <div className='row'>
-                <div className='col-12'>
-                    <div className='container'>
-                        <nav className="navbar navbar-expand-lg navbar-light">
-                            <div className="container-fluid">
-                                <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                        <li className="nav-item me-5">
-                                            <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/productDetails">Product Details</Link>
-                                        </li>
-                                        <li className="nav-item me-5">
-                                            <Link className="nav-link " to="/aboutus" style={{ fontWeight: "bolder", color: "black" }}>About Us</Link>
-                                        </li>
-                                        <li className="nav-item me-5">
-                                        <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/careers">Careers</Link>
-                                        </li>
-                                        <li className="nav-item me-5">
-                                        <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/contact">Contact Us</Link>
-                                        </li>
-                                        <li className="nav-item me-5">
-                                        <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/blogs">Blogs</Link>
-                                        </li>
-                                    </ul>
+
+                <div className='row'>
+                    <div className='col-12'>
+                        <div className='container'>
+                            <nav className="navbar navbar-expand-lg navbar-light">
+                                <div className="container">
+                                    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+                                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                                            <li className="nav-item me-5">
+                                                <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/productDetails">Product Details</Link>
+                                            </li>
+                                            <li className="nav-item me-5">
+                                                <Link className="nav-link " to="/aboutus" style={{ fontWeight: "bolder", color: "black" }}>About Us</Link>
+                                            </li>
+                                            <li className="nav-item me-5">
+                                                <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/careers">Careers</Link>
+                                            </li>
+                                            <li className="nav-item me-5">
+                                                <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/contact">Contact Us</Link>
+                                            </li>
+                                            <li className="nav-item me-5">
+                                                <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/blogs">Blogs</Link>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                        </nav>
+                            </nav>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div >
         </section >
-        // menue 
 
     )
 }

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 
 const Blogs = () => {
     return (
-    <section className='mt-5'>
-        <div className='container'>
-            <section className="text-center">
-                <h1 className="mb-5"><strong>Blogs</strong></h1>
+        <section className='mt-5 text-center'>
+            <div className='container'>
+                <h1 className="mb-5">
+                    <strong>Blogs</strong></h1>
                 <div className="row">
                     <div className="col-lg-4 col-md-12 mb-4">
                         <div className="card" style={{ height: '100%' }}>
@@ -72,8 +72,7 @@ const Blogs = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
         </section>
     )
 }
