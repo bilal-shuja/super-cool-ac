@@ -1,94 +1,90 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React,{useState} from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    return (
-        <section>
-            <div className="Container">
-                <div className="top-bar d-none d-md-block bg-light">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-2 col-md-3 col-12 ms-auto ">
-                                <ul className="social-media list-inline m-0 p-0">
-                                    <li className="list-inline-item">
-                                        <a href="#" target="_blank">
-                                            <img src="/facebook.png" alt="facebook" className="img-fluid lazyload" />
-                                        </a>
-                                    </li>
-                                    <li className="list-inline-item">
-                                        <a href="#" target="_blank">
-                                            <img src="/insta.png" alt="Instagram" className="img-fluid lazyload" />
-                                        </a>
-                                    </li>
-                                    <li className="list-inline-item">
-                                        <a href="# " target="_blank">
-                                            <img src="/youtube.png" alt="youtube" className="img-fluid lazyload" />
-                                        </a>
-                                    </li>
-                                    <li className="list-inline-item">
-                                        <a href="#" target="_blank">
-                                            <img src="/linked.png" alt="linkedin" className="img-fluid lazyload " width="26px" />
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-12">
-                        <nav className="navbar navbar-expand-lg navbar-light ">
-                            <div className="container fluid w-100 d-flex ">
-                                <div className='d-flex flex-row justify-content-between'>
-                                    <button className="navbar-toggler mx-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span className="navbar-toggler-icon"></span>
-                                    </button>
-                                    <a className="navbar-brand mb-0 h1" href='/'>
-                                        <h1>Super Cool AC</h1>
-                                    </a>
-                                </div>
-                                <form className="d-flex w-50 form" style={{ marginRight: "25%" }}>
-                                    <input className="form-control me-2 rounded-3" type="search" placeholder="Search" aria-label="Search" />
-                                    <button className="btn btn-outline-light bg-light" style={{ color: "black" }} type="submit">Search</button>
-                                </form>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
+  const [navbarBtns , setNavbarBtns] = useState("")
+  return (
+    <>
+      <div className="d-flex justify-content-center text-white fw-bold bg-info p-1 font-monospace fs-5 ">
+        <span className="me-2">Verity of things and much more!</span>
+        <i className="fa-brands fa-facebook fs-3 me-3" />
+        <i className="fa-brands fa-instagram fs-3 me-3" />
+        <i className="fa-brands fa-youtube fs-3 me-3" />
+        <i className="fa-brands fa-linkedin fs-3 " />
+      </div>
 
-                <div className='row'>
-                    <div className='col-12'>
-                        <div className='container'>
-                            <nav className="navbar navbar-expand-lg navbar-light">
-                                <div className="container">
-                                    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                            <li className="nav-item me-5">
-                                                <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/productDetails">Product Details</Link>
-                                            </li>
-                                            <li className="nav-item me-5">
-                                                <Link className="nav-link " to="/aboutus" style={{ fontWeight: "bolder", color: "black" }}>About Us</Link>
-                                            </li>
-                                            <li className="nav-item me-5">
-                                                <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/careers">Careers</Link>
-                                            </li>
-                                            <li className="nav-item me-5">
-                                                <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/contact">Contact Us</Link>
-                                            </li>
-                                            <li className="nav-item me-5">
-                                                <Link className="nav-link " style={{ fontWeight: "bolder", color: "black" }} to="/blogs">Blogs</Link>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div >
-        </section >
+      {/* Navbar */}
+      <nav
+        className="navbar navbar-expand-lg navbar-light bg-white p-3"
+        style={{ borderBottom: "1px solid #0dcaf0" }}
+      >
+        <div className="container">
+          <Link  onClick={()=> setNavbarBtns("")} to="/" className="navbar-logo fa-solid fa-lightbulb fs-1" />
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul
+              className="navbar-nav ms-auto mb-2 mb-lg-0"
+              style={{ fontFamily: "'Fira Sans', sans-serif" }}
+            >
+              <li 
+                onClick={()=> setNavbarBtns("Products")}
+              >
+                <Link
+                  to="/productDetails"
+                  className={navbarBtns === "Products" ?"nav-link px-2 bg-info text-white rounded-pill me-5":"nav-link px-2 text-dark me-5"}
+                >
+                  Products
+                </Link>
+              </li>
+              <li
+               onClick={()=> setNavbarBtns("About")}
+              >
+                <Link to="/AboutUs" className={navbarBtns === "About" ?"nav-link px-2 bg-info text-white rounded-pill me-5":"nav-link px-2 text-dark me-5"}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <a href="#" className="nav-link px-2 text-dark me-5">
+                  Careers
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="nav-link px-2 text-dark"
+                  style={{ marginRight: "9em" }}
+                >
+                  Blogs
+                </a>
+              </li>
+            </ul>
+            <form className="d-flex">
+              <input
+                className="form-control"
+                type="search"
+                placeholder="Search..."
+                aria-label="Search"
+              />
+              <span className="input-group-text bg-white">
+                <i className="fa-solid fa-magnifying-glass"></i>
+              </span>
+            </form>
+          </div>
+        </div>
+      </nav>
+      {/* Navbar */}
+    </>
+  );
+};
 
-    )
-}
-
-export default Navbar
+export default Navbar;
