@@ -1,8 +1,22 @@
-import React,{useState} from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link,useNavigate } from "react-router-dom";
+import { useGetSearchProductsQuery } from "../features/ProductSlice/SearchProductSlice";
 
 const Navbar = () => {
-  const [navbarBtns , setNavbarBtns] = useState("")
+  const navigate= useNavigate();
+  const [navbarBtns, setNavbarBtns] = useState("")
+  const[keyword,setKeyword] = useState('');
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    // Perform the search action using the keyword
+    navigate(`/search?keyword=${encodeURIComponent(keyword)}`)
+    console.log("Perform search with keyword:", keyword);
+    
+  };
+  useEffect(() => {
+    localStorage.setItem('searchkeyword', keyword);
+  }, [keyword])
+  
   return (
     <>
       <div className="d-flex justify-content-center text-white fw-bold bg-info p-1 font-monospace fs-5 ">
@@ -19,7 +33,7 @@ const Navbar = () => {
         style={{ borderBottom: "1px solid #0dcaf0" }}
       >
         <div className="container">
-          <Link  onClick={()=> setNavbarBtns("")} to="/" className="navbar-logo fa-solid fa-lightbulb fs-1" />
+          <Link onClick={() => setNavbarBtns("")} to="/" className="navbar-logo fa-solid fa-lightbulb fs-1" />
           <button
             className="navbar-toggler"
             type="button"
@@ -36,20 +50,20 @@ const Navbar = () => {
               className="navbar-nav ms-auto mb-2 mb-lg-0"
               style={{ fontFamily: "'Fira Sans', sans-serif" }}
             >
-              <li 
-                onClick={()=> setNavbarBtns("Products")}
+              <li
+                onClick={() => setNavbarBtns("Products")}
               >
                 <Link
                   to="/productDetails"
-                  className={navbarBtns === "Products" ?"nav-link px-2 bg-info text-white rounded-pill me-5":"nav-link px-2 text-dark me-5"}
+                  className={navbarBtns === "Products" ? "nav-link px-2 bg-info text-white rounded-pill me-5" : "nav-link px-2 text-dark me-5"}
                 >
                   Products
                 </Link>
               </li>
               <li
-               onClick={()=> setNavbarBtns("About")}
+                onClick={() => setNavbarBtns("About")}
               >
-                <Link to="/AboutUs" className={navbarBtns === "About" ?"nav-link px-2 bg-info text-white rounded-pill me-5":"nav-link px-2 text-dark me-5"}>
+                <Link to="/AboutUs" className={navbarBtns === "About" ? "nav-link px-2 bg-info text-white rounded-pill me-5" : "nav-link px-2 text-dark me-5"}>
                   About
                 </Link>
               </li>
@@ -58,25 +72,39 @@ const Navbar = () => {
                   Careers
                 </a>
               </li>
-              <li>
+              <li
+                onClick={() => setNavbarBtns("Blogs")}
+              >
                 <a
                   href="#"
-                  className="nav-link px-2 text-dark"
+                  className="nav-link text-dark"
                   style={{ marginRight: "9em" }}
                 >
                   Blogs
                 </a>
               </li>
+              <li
+                onClick={() => setNavbarBtns("Contact Us")}>
+                <Link to="/ContactUs" className={navbarBtns === "Contact" ? "nav-link px-2 bg-info text-white rounded-pill me-5" : "nav-link px-2 text-dark me-5"}>
+                  Contact
+                </Link>
+              </li>
+
+
             </ul>
-            <form className="d-flex">
+            <form className="d-flex" onSubmit={handleSearchSubmit}>
               <input
                 className="form-control"
                 type="search"
                 placeholder="Search..."
                 aria-label="Search"
+                value={keyword}
+              onChange={(e) => setKeyword(e.target.value)}
               />
-              <span className="input-group-text bg-white">
-                <i className="fa-solid fa-magnifying-glass"></i>
+              <span className="input-group-text bg-white" >
+                <button className="btn "  type="submit">
+                  <i className="fa-solid fa-magnifying-glass"></i></button>
+                
               </span>
             </form>
           </div>

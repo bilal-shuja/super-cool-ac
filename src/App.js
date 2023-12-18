@@ -7,6 +7,8 @@ import AboutUs from "./components/About/AboutUs";
 import ProductDetails from "./pages/ProductDetails";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductListing from "./pages/ProductListing";
+import Contact from "./pages/Contact";
+import Search from "./pages/Search";
 function App() {
   return (
     <Router>
@@ -18,6 +20,8 @@ function App() {
         <Route path="/productDetails" element={<ProductDetails />} />
         <Route path="/Blog" element={<Blogs />} />
         <Route path="/productListing/:productId" element={<ProductListing />}/>
+        <Route path="/ContactUs" element={<Contact />} />
+        <Route path="search" element={<Search />}/>
       </Routes>
       <Footer />
     </Router>
