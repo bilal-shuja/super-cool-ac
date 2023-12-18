@@ -11,7 +11,7 @@ export const store = configureStore({
     [productApi.reducerPath]: productApi.reducer,
     [advanceProductSearchApi.reducerPath]: advanceProductSearchApi.reducer,
     [productByIdApi.reducerPath]: productByIdApi.reducer,
-    [searchProductApi.reducerPath]: searchProductApi,
+    [searchProductApi.reducerPath]: searchProductApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(

@@ -11,7 +11,7 @@ export const searchProductApi = createApi({
                 method:"POST"
             }),
             transformResponse:(response) => {
-                console.log(response,"response articles");
+                console.log(response,"search articles");
                 return response;
             }
         }),

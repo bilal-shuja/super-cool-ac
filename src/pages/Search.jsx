@@ -1,54 +1,83 @@
-import React, { useEffect, useState } from 'react'
-import { useGetSearchProductsQuery } from '../features/ProductSlice/SearchProductSlice'
+import React, { useEffect, useState } from 'react';
+import { useGetSearchProductsQuery } from '../features/ProductSlice/SearchProductSlice';
+import './searchStyle.css'
+import { Link } from 'react-router-dom';
+const imageUrl = 'https://supercoolacimages.alphanitesofts.net/';
 
 const Search = () => {
-    const searchKeyword = localStorage.getItem('searchkeyword');
     const {
         data: searchProductData,
         isError: searchProductIsError,
-        isLoading: searchProductIsLoading } = useGetSearchProductsQuery();
+        isLoading: searchProductIsLoading,
+    } = useGetSearchProductsQuery();
+    const searchKeyword = localStorage.getItem('searchkeyword');
+
     useEffect(() => {
-        if (searchKeyword) {
-            console.log(searchKeyword, 'search product');
+        if (searchKeyword && searchProductData?.data) {
         }
-    }, [searchKeyword]);
+    }, [searchKeyword, searchProductData?.data]);
+    if (searchProductIsLoading) {
+        return <p>Loading...</p>;
+    }
+
+    // Check for errors
+    if (searchProductIsError) {
+        return <p>Error fetching data</p>;
+    }
+
+    // Check if data is not available
+    if (!searchProductData || !searchProductData.data) {
+        return <p>No data available</p>;
+    }
+
+    // Filter and map over the data
+    const filteredProducts = searchProductData.data.filter((product) =>
+        product.name.toLowerCase().includes(searchKeyword.toLowerCase())
+    );
 
     return (
-        <section style={{ backgroundColor: "#eee;" }}>
-            <div class="container py-5">
-                <div class="row justify-content-center mb-3">
-                    <div class="col-md-12 col-xl-10">
-                        <div class="card shadow-0 border rounded-3">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-4 col-lg-2 col-xl-3 mb-4 mb-lg-0">
-                                        <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/img%20(4).webp"
-                                                class="w-100" />
-                                            <a href="#!">
-                                                <div class="hover-overlay">
-                                                    <div class="mask" style={{ backgroundColor: "rgba(253, 253, 253, 0.15);" }}>
-                                                    </div>
-                                                </div>
-                                            </a>
+        <section>
+            <div class="container">
+                <div class="search-wrapper">
+                    <div class="search-data">
+                        {filteredProducts?.map((product) => (
+                            <div class="sr-box-wrapper">
+                                <Link to={`/productListing/${product.id}`}>
+                                    <div class="sr-box">
+                                    {product?.image ? (
+                                        <img src={`${imageUrl}${product.image[0]}`} alt='image'/>):null}
+                                        <div class="sr-content">
+                                            <h3>{product.name}</h3>
+                                            {/* <h5>SGA288HE</h5> */}
                                         </div>
                                     </div>
-                                    <div class="col-md-2 col-lg-4 col-xl-6">
-                                        <h5>Quant trident shirts</h5>
-                                        <p class="text-truncate mb-4 mb-md-0">
-                                            There are many variations of passages of Lorem Ipsum available, but the
-                                            majority have suffered alteration in some form, by injected humour, or
-                                            randomised words which don't look even slightly believable.
-                                        </p>
-                                    </div>
-                                </div>
+                                    {/* <div class="specifications">
+                                        <span>
+                                            <b>Rated T1 Capacity (Btu/H):</b> {product.capacity}</span>
+                                        &nbsp;&nbsp;
+                                        <span><b>Compressor Type / Climate Type:</b> {product.compressor}</span>
+                                        &nbsp;&nbsp;
+                                        <span><b>Filter:</b> Easy To Clean</span>
+                                        &nbsp;&nbsp;
+                                        <span><b>Refrigerant Type:</b> R22</span>
+                                        &nbsp;&nbsp;
+                                        <span><b>Air Flow (M3/H):</b> 1011</span
+                                        >&nbsp;&nbsp;
+                                        <span><b>Voltage (V, Hz, Ph):</b> 220-240V, 50Hz, 1Ph</span>
+                                        &nbsp;&nbsp;
+                                        <span><b>Dimension (Prod/Pack WxDxH Mm):</b> 660x780x428 / 770x915x510</span>
+                                        &nbsp;&nbsp;
+                                        <span><b>Weight (Net /Gross Kg):</b> 62.7/74.8</span>
+                                        &nbsp;&nbsp;
+                                    </div> */}
+                                </Link>
                             </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
-            </div >
-        </section >
-    )
-}
+            </div>
+        </section>
+    );
+};
 
-export default Search
+export default Search;
