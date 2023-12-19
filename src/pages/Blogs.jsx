@@ -3,25 +3,25 @@ import { Link } from 'react-router-dom'
 
 const Blogs = () => {
   const blogs = [
-    {
+    {id:1,
       image: "https://mdbootstrap.com/img/new/standard/nature/184.jpg",
       date: "28 Nov 2023",
       title: "Energy-efficient fridges – The solution to save money and the planet!",
       description: "Refrigerators can consume lots of energy at home, so optimizing their energy can impact electricity and energy efficiency bills...."
     },
-    {
+    {id:2,
       image: "https://mdbootstrap.com/img/new/standard/nature/184.jpg",
       date: "28 Nov 2023",
       title: "Energy-efficient fridges – The solution to save money and the planet!",
       description: "Refrigerators can consume lots of energy at home, so optimizing their energy can impact electricity and energy efficiency bills...."
     },
-    {
+    {id:3,
       image: "https://mdbootstrap.com/img/new/standard/nature/184.jpg",
       date: "28 Nov 2023",
       title: "Energy-efficient fridges – The solution to save money and the planet!",
       description: "Refrigerators can consume lots of energy at home, so optimizing their energy can impact electricity and energy efficiency bills...."
     },
-    {
+    {id:4,
       image: "https://mdbootstrap.com/img/new/standard/nature/184.jpg",
       date: "28 Nov 2023",
       title: "Energy-efficient fridges – The solution to save money and the planet!",
@@ -49,7 +49,10 @@ const Blogs = () => {
                   <p className="card-text " style={{ textAlign: 'left', marginTop: "1em" }}>
                     {blog.description}
                   </p>
-                  <Link to="#" className="btn btn-outline-info font-monospace float-start">Read...</Link>
+                  <Link to={`/blogs/${blog.id}`}
+                      state= {{ blogData: blogs}} // Pass blog data as state
+                    
+                   className="btn btn-outline-info font-monospace float-start">Read...</Link>
                 </div>
               </div>
             </div>))}

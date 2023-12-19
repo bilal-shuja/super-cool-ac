@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductListing from "./pages/ProductListing";
 import Contact from "./pages/Contact";
 import Search from "./pages/Search";
+import BlogsDetails from "./pages/BlogsDetails";
 function App() {
   return (
     <Router>
@@ -21,7 +22,8 @@ function App() {
         <Route path="/Blog" element={<Blogs />} />
         <Route path="/productListing/:productId" element={<ProductListing />}/>
         <Route path="/ContactUs" element={<Contact />} />
-        <Route path="search" element={<Search />}/>
+        <Route path="/search" element={<Search />}/>
+        <Route path="/blogs/:blogId" element={<BlogsDetails />} />
       </Routes>
       <Footer />
     </Router>

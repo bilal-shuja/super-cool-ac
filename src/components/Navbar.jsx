@@ -75,17 +75,18 @@ const Navbar = () => {
               <li
                 onClick={() => setNavbarBtns("Blogs")}
               >
-                <a
-                  href="#"
-                  className="nav-link text-dark"
-                  style={{ marginRight: "9em" }}
+                <Link
+                  to="/blogs"
+                  className={navbarBtns === "About" ? "nav-link px-2 bg-info text-white rounded-pill me-5" : "nav-link px-2 text-dark me-5"}
                 >
                   Blogs
-                </a>
+                </Link>
               </li>
               <li
                 onClick={() => setNavbarBtns("Contact Us")}>
-                <Link to="/ContactUs" className={navbarBtns === "Contact" ? "nav-link px-2 bg-info text-white rounded-pill me-5" : "nav-link px-2 text-dark me-5"}>
+                <Link to="/ContactUs"
+                style={{ marginRight: "9em" }} 
+                className={navbarBtns === "Contact" ? "nav-link px-2 bg-info text-white rounded-pill me-5" : "nav-link px-2 text-dark me-5"}>
                   Contact
                 </Link>
               </li>
