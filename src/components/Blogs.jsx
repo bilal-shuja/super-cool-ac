@@ -5,8 +5,8 @@ const Blogs = () => {
     return (
     <section className='mt-5'>
         <div className='container'>
-            <section className="text-center">
-                <h2 className="text-dark mb-5">Our <span className='fw-bold'>Blogs</span></h2>
+                <h1 className="mb-5">
+                    <strong>Blogs</strong></h1>
                 <div className="row">
                     <div className="col-lg-4 col-md-12 mb-4">
                         <div className="card bg-white border border-2">
@@ -68,8 +68,7 @@ const Blogs = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
         </section>
     )
 }

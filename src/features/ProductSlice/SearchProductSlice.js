@@ -1,20 +1,20 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 const base_url = "https://supercoolac.alphanitesofts.net/api/";
 
-export const productApi = createApi({
-    reducerPath:"productsById",
+export const searchProductApi = createApi({
+    reducerPath:"search_product",
     baseQuery:fetchBaseQuery({baseUrl: base_url}),
     endpoints:(builder)=>({
-        getProducts:builder.query({
+        getSearchProducts:builder.query({
             query:()=>({
-                url:`fetch_all_products`,
+                url:`search_product`,
                 method:"POST"
             }),
             transformResponse:(response) => {
-                console.log(response,"response articles");
+                console.log(response,"search articles");
                 return response;
             }
         }),
     })
 })
-export const {useGetProductsQuery}=productApi;
+export const {useGetSearchProductsQuery} = searchProductApi;
